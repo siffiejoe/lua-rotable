@@ -17,7 +17,7 @@ recent Lua versions][4] anyway.
 
 ##                                API                               ##
 
-    [-0, +1, m]
+    /*  [-0, +1, m]  */
     void rotable_newlib( lua_State* L, luaL_Reg const l[] );
 
 This function is creates and pushes a `rotable` onto the Lua stack. If
