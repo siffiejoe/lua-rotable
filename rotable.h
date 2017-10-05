@@ -19,5 +19,10 @@ typedef struct rotable_Reg {
  * `rotable_Reg` arrays (in case you don't use `lauxlib.h`) */
 ROTABLE_EXPORT void rotable_newlib( lua_State* L, void const* reg );
 
+/* Since userdatas can not be used as `__index` meta methods directly
+ * this function creates a C closure that looks up keys in a given
+ * `rotable_Reg` array. */
+ROTABLE_EXPORT void rotable_newidx( lua_State* L, void const* reg );
+
 #endif /* ROTABLE_H_ */
 

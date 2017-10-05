@@ -33,12 +33,24 @@ static luaL_Reg const funcs[] = {
   { "func2", func2 },
   { "func3", func3 },
   { "func4", func4 },
+  { "func5", func4 },
+  { "func6", func4 },
   { 0, 0 },
 };
 
 
 int luaopen_mod1( lua_State* L ) {
   rotable_newlib( L, funcs );
+  return 1;
+}
+
+
+int luaopen_mod1_idx( lua_State* L ) {
+  lua_newtable( L );
+  lua_newtable( L );
+  rotable_newidx( L, funcs );
+  lua_setfield( L, -2, "__index" );
+  lua_setmetatable( L, -2 );
   return 1;
 }
 

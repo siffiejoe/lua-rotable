@@ -42,3 +42,13 @@ int luaopen_mod2( lua_State* L ) {
 }
 
 
+int luaopen_mod2_idx( lua_State* L ) {
+  lua_newtable( L );
+  lua_newtable( L );
+  rotable_newidx( L, funcs );
+  lua_setfield( L, -2, "__index" );
+  lua_setmetatable( L, -2 );
+  return 1;
+}
+
+
