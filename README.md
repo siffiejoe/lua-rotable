@@ -20,7 +20,7 @@ recent Lua versions][4] anyway.
     /*  [-0, +1, m]  */
     void rotable_newlib( lua_State* L, luaL_Reg const l[] );
 
-This function is creates and pushes a `rotable` onto the Lua stack. If
+This function creates and pushes a `rotable` onto the Lua stack. If
 you don't have the auxiliary library available, you can use the type
 `rotable_Reg` instead of `luaL_Reg` in the above signature. A
 `rotable` is a small userdata (so you *do* have some dynamic memory
@@ -31,7 +31,7 @@ order (which is highly recommended), access is more efficient because
 a binary search is used. Otherwise every access uses a linear search
 for the key.
 
-In constrast to the original `rotable`s in the eLua project, this
+In contrast to the original `rotable`s in the eLua project, this
 implementation only supports string keys and C function values. If you
 need anything else, you can consider using a `rotable` as fallback
 using an `__index` metamethod on a normal table.
