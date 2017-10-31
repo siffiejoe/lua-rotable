@@ -28,7 +28,7 @@ typedef struct {
 } rotable;
 
 
-static char unique_address[ 1 ] = { 0 };
+static char const unique_address[ 1 ] = { 0 };
 
 
 static int reg_compare(void const* a, void const* b) {

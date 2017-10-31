@@ -37,7 +37,7 @@ need anything else, you can consider using a `rotable` as fallback
 using an `__index` metamethod on a normal table.
 
 
-    /*  [-0, +1, m] */
+    /*  [-0, +1, m]  */
     void rotable_newidx( lua_State* L, luaL_Reg const l[] );
 
 Since userdata values can't be used as `__index` meta methods, this
